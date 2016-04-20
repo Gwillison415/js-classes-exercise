@@ -70,7 +70,7 @@ _An object-oriented book-list!_
 
 *   **Booklists** and **Books** might need more methods than that. Try to think of more that might be useful.
 
-### The Game (advanced)
+### The Game (Homework)
 Pick one of three games: Chess, Poker, or Roshambo (rock, paper, scissors). Roshambo is the easiest, followed by Poker, then Chess.
 
 * Your game should have a **Game** object shat should be responsible for keeping track of it's state
