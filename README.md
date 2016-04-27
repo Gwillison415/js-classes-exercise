@@ -42,6 +42,8 @@ _Write yourself a virtual cat - animals with a CLI are so much nicer than ones w
 
 _An object-oriented book-list!_
 
+This booklist program should allow you to keep track of all the books you've read. You should be able to always find out what book you last read, what book you're reading now, and what book you want to read next. You should also be able to mark your current book as "finished", which will update all of the information about your current reading accordingly.
+
 *   Create a class through the constructor invocation pattern. ` BookList = function() {} `
 *   Create another class called Book. `Book = function() {}`
 
@@ -73,7 +75,7 @@ _An object-oriented book-list!_
 *   **Booklists** and **Books** might need more methods than that. Try to think of more that might be useful.
 
 ### The Game (Homework)
-Pick one of three games: Chess, Poker, or Roshambo (rock, paper, scissors). Roshambo is the easiest, followed by Poker, then Chess.
+Pick one of three games: Chess, Poker, or Roshambo (rock, paper, scissors). Roshambo is the easiest, followed by Poker, then Chess. This will involve you deciding what classes to create, and what methods and properties they'll have. If you're struggling with the design, ask an instructor for help!
 
 * Your game should have a **Game** object shat should be responsible for keeping track of it's state
 	* State depends on the game, all games have players, but not all games have pieces, cards, or moves. try to plan out what your state will be first
