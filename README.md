@@ -31,7 +31,7 @@ Classname.prototype.methodName = function() {};
 
 _Write yourself a virtual cat - animals with a CLI are so much nicer than ones with fur._
 
-*   Create an object with the constructor invocation pattern: ` BookList = function() {} ` that represents a Cat. It should have properties for `tiredness`, `hunger`, `lonliness` and `happiness`
+*   Create an object with the constructor invocation pattern: `Cat = function() {}` that represents a Cat. It should have properties for `tiredness`, `hunger`, `lonliness` and `happiness`
 *   Next, write methods that increase and decrease those properties (there's an example in the slides). Call them something that actually represents what would increase or decrease these things, like "feed", "sleep", or "pet".
 *   Last, write a method that prints out the cat's overall status.
 *   Bonus: Make the functions take arguments that increase or decrease arbitrary amounts, passed in through parameters
