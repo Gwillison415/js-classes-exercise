@@ -31,16 +31,18 @@ Classname.prototype.methodName = function() {};
 
 _Write yourself a virtual cat - animals with a CLI are so much nicer than ones with fur._
 
-*   Create an object that represents a cat. It should have properties for `tiredness`, `hunger`, `lonliness` and `happiness`
+*   Create an object with the constructor invocation pattern: `Cat = function() {}` that represents a Cat. It should have properties for `tiredness`, `hunger`, `lonliness` and `happiness`
 *   Next, write methods that increase and decrease those properties (there's an example in the slides). Call them something that actually represents what would increase or decrease these things, like "feed", "sleep", or "pet".
-*   Last, write a method that prints out the cat's status in each area.
-*   Bonus: Make the functions take arguments that increase or decrease arbitrary amounts
-*   Bonus: Make the functions as arbitrary as cats are - sometimes make it so the cat doesn't _want_ to be petted.
+*   Last, write a method that prints out the cat's overall status.
+*   Bonus: Make the functions take arguments that increase or decrease arbitrary amounts, passed in through parameters
+*   Bonus: Make the functions as arbitrary as cats are - sometimes make it so the cat doesn't _want_ to be petted. Check out `Math.random()'!
 
 
 ### The Reading List
 
 _An object-oriented book-list!_
+
+This booklist program should allow you to keep track of all the books you've read. You should be able to always find out what book you last read, what book you're reading now, and what book you want to read next. You should also be able to mark your current book as "finished", which will update all of the information about your current reading accordingly.
 
 *   Create a class through the constructor invocation pattern. ` BookList = function() {} `
 *   Create another class called Book. `Book = function() {}`
@@ -48,30 +50,32 @@ _An object-oriented book-list!_
 *   **BookLists** should have the following properties:
 	*   Number of books marked as read
 	*   Number of books marked not read yet
-	*   A reference to the next book to read (book object)
-	*   A reference to the current book being read (book object)
-	*   A reference to the last book read (book object)
+	*   A reference to the next book to read (which should be an instance of a book object)
+	*   A reference to the current book being read (book instance)
+	*   A reference to the last book read (book instance)
 	*   An array of all the Books
 *   Each **Book** should have several properties:
 	*   Title
-	*  Genre
-	*  Author
+	*   Genre
+	*   Author
 	*   Read (true or false)
 	*   Read date, can be blank, otherwise needs to be a [JS Date() object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 *   Every **Booklist** should have a few methods: 
 	* .add(book)
 		* should add a **book** to the books list.
+		* if the "current book" property is empty, it should set the newly added book to the the current book, unless that book has already been read.
+		* If the "next book" property is empty, it should set the newly added book to be the next book, unless that book has already been read.
 	*   .finishCurrentBook()
-		*   should mark the **book** that is currently being read as "read"
-		*   Give it a read date of new Date(Date.now())
-		*   Change the last **book** read to be the book that just got finished
-		*   Change the current **book** to be the next book to be read
-		*   Change the next **book** to be read property to be the first unread book you find in the list of books
+		*   Should change the status of the **book** that is currently being read to "read"
+		*   Give the current book a read date of new Date(Date.now())
+		*   Point the "last **book* read" reference at the current book
+		*   Point "current **book**" reference to be whatever is in the "next book" reference
+		*   Change the "next **book**" reference to be the first unread book you find in the list of books (you'll have to look through the array to find one)
 
 *   **Booklists** and **Books** might need more methods than that. Try to think of more that might be useful.
 
 ### The Game (Homework)
-Pick one of three games: Chess, Poker, or Roshambo (rock, paper, scissors). Roshambo is the easiest, followed by Poker, then Chess.
+Pick one of three games: Chess, Poker, or Roshambo (rock, paper, scissors). Roshambo is the easiest, followed by Poker, then Chess. This will involve you deciding what classes to create, and what methods and properties they'll have. If you're struggling with the design, ask an instructor for help!
 
 * Your game should have a **Game** object shat should be responsible for keeping track of it's state
 	* State depends on the game, all games have players, but not all games have pieces, cards, or moves. try to plan out what your state will be first
