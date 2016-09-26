@@ -35,14 +35,14 @@ _Write yourself a virtual cat - animals with a CLI are so much nicer than ones w
 *   Create an object with the constructor invocation pattern: `Cat = function() {}` that represents a Cat. It should have properties for `tiredness`, `hunger`, `loneliness` and `happiness`
 *   Next, write methods that increase and decrease those properties (there's an example in the slides). Call them something that actually represents what would increase or decrease these things, name them `feed`, `sleep`, and `pet`
 *   Make the functions take arguments that increase or decrease arbitrary amounts, passed in through parameters
-*   Write a method that prints out the cat's overall status
+*   Write a method that returns the cat's overall status
 *   Bonus: Make the functions as arbitrary as cats are - sometimes make it so the cat doesn't _want_ to be petted. Check out `Math.random()`! Then, write a test that runs the `pet()` method a few times to make sure that your cat will sometimes reject being petted.
 
 
 ### The Reading List
 
 _An object-oriented book-list!_
-
+		
 This booklist program should allow you to keep track of all the books you've read. You should be able to always find out what book you last read, what book you're reading now, and what book you want to read next. You should also be able to mark your current book as "finished", which will update all of the information about your current reading accordingly.
 
 *   Create a class through the constructor invocation pattern. ` BookList = function() {} `
