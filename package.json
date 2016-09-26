@@ -1,0 +1,23 @@
+{
+  "name": "js-classes-exercise",
+  "version": "1.0.0",
+  "description": "These are the inheritance-free exercises to introduce OOP.",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha tests/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gSchool/js-classes-exercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gSchool/js-classes-exercise/issues"
+  },
+  "homepage": "https://github.com/gSchool/js-classes-exercise"
+}
