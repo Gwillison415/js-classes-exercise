@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "mocha tests/tests.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
