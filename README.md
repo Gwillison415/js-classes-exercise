@@ -23,12 +23,18 @@ Classname.prototype.methodName = function() {};
 ```
 
 
-
 ## Exercises:
 
 ___Start by running the tests - type `npm test` in your terminal. Make the tests pass by doing the following:___
 
 ### The Cat
+
+#### Articles 
+Read these articles before getting started! 
+
+- Creating Objects with State and Behavior
+- Modeling Objects
+- Creating Classes
 
 _Write yourself a virtual cat - animals with a CLI are so much nicer than ones with fur._
 
@@ -40,6 +46,10 @@ _Write yourself a virtual cat - animals with a CLI are so much nicer than ones w
 
 
 ### The Reading List
+
+#### Articles 
+
+- OOP Patterns
 
 _An object-oriented book-list!_
 		
@@ -76,6 +86,12 @@ This booklist program should allow you to keep track of all the books you've rea
 *   **Booklists** and **Books** might need more methods than that. Try to think of more that might be useful.
 
 ### The Game (Homework)
+
+#### Articles
+
+- Modeling Objects
+- Inheritance, Encapsulation, Polymorphism
+
 Pick one of three games: Chess, Poker, or Roshambo (rock, paper, scissors). Roshambo is the easiest, followed by Poker, then Chess. This will involve you deciding what classes to create, and what methods and properties they'll have. If you're struggling with the design, ask an instructor for help!
 
 * Your game should have a **Game** object shat should be responsible for keeping track of it's state
