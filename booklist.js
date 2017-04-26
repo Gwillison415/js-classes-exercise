@@ -49,14 +49,20 @@ BookList.prototype.add = function (book) {
     }
 
 };
+BookList.prototype.finishCurrentBook = function (){
+    this.readBooks++;
+    this.unreadBooks--;
+    this.currentBook.read = true;
+    this.currentBook.realDate = new Date(Date.now());
+    this.lastBook = this.currentBook;
+    this.currentBook = this.nextBook;
 
-class ClassName {
-  constructor() {
+    var unreadBooks = this.books.filter((book) => !book.read && book !== this.currentBook)
+    this.nextBook = unreadBooks[0];
+};
 
-  }
-}
 
 module.exports = {
   Book: Book,
   BookList: BookList
-}
+};
