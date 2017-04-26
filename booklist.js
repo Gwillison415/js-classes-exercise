@@ -12,7 +12,7 @@ class Book {
     this.title =title;
     this.genre = genre;
     this.author = author;
-    this.read = read;
+    this.read = read; //boolean has been read ?
     this.readDate;
 
     if(this.read) {
@@ -25,9 +25,9 @@ class BookList {
   constructor(){
       this.readBooks = 0;
       this.unreadBooks =0;
-      this.nextBook ={};
-      this.previousBook ={};
-      this.currentBook ={};
+      this.nextBook;
+      this.lastBook;
+      this.currentBook;
       this.books =[];
     }
 
@@ -37,16 +37,19 @@ BookList.prototype.add = function (book) {
     this.books.push(book);
     if (book.read) {
       this.readBooks++;
+      this.lastBook = book;
     } else {
       this.unreadBooks++;
+      //this.nextBook = book;
+      if (this.currentBook === undefined) {
+        this.currentBook = book;
+      }  else if (this.nextBook === undefined) {
+        this.nextBook = book;
+      }
     }
-    if (this.currentBook.length < 1 ) {
-      this.currentBook.push(book);
-    } else if (this.nextBook.length < 1 && !this.read) {
-      this.nextBook.push(book);
-      //Object.keys(this.nextBook).length <= 1
-    }
+
 };
+
 class ClassName {
   constructor() {
 
