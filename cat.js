@@ -31,10 +31,10 @@ Cat.prototype.status = function () {
 };
 
 Cat.prototype.pet = function (minutes = 1) {
-   var fickle = Math.round(Math.random())
+    var fickle = Math.round(Math.random())
    // BONUS   -----------------------------------commented out----------------------------
-    //if (fickle === 1) {
-      this.loneliness-= minutes;
+    // if (fickle === 1) {
+      this.loneliness -= minutes;
       this.happiness += (1.5 * minutes);
     // } else {
     //   console.log("YYOOOOwwwwLLLLL");
