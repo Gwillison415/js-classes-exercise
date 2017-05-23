@@ -4,7 +4,7 @@ class Player {
     this.wins = 0;
     this.losses = 0;
     this.roundsPlayed = 0;
-    this.move = undefined;
+    //this.move = undefined;
   }
   move() {
     this.odds = Math.random(Math.random());
