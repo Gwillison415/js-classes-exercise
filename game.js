@@ -8,7 +8,7 @@ class Player {
   }
   hand() {
     //randomize odds of picking any hand gesture
-    //this.odds = Math.random(Math.random()).toFixed(2);
+     //this.odds = Math.random(Math.random()).toFixed(2);
     // console.log(this.odds);
     if (this.odds >= .67) {
       this.move = 'rock';
@@ -26,7 +26,7 @@ class Player {
   //console.log(this.player.move);
   status(){
     //console.log(`${this.player} has ${this.wins} wins and ${this.losses} losses`);
-    return `${this.player} has ${this.wins} wins and ${this.losses} losses`;
+    return `${this.name} has ${this.wins} wins and ${this.losses} losses and played ${this.roundsPlayed} rounds`;
   }
 }
 
@@ -78,30 +78,32 @@ class Game {
 }
 
 
-// let grant = new Player("gWilli");
-// let loser = new Player("rFitz");
-// grant.odds = .30;
-// loser.odds = .65;
-// let game2 =new Game(grant, loser);
-// game2.turn(grant.move(), loser.move());
-// console.log(game2);
+let grant = new Player("gWilli");
+let loser = new Player("rFitz");
+grant.odds = .30;
+loser.odds = .65;
+let game2 =new Game(grant, loser);
 
-function bestOf3(player1, player2) {
-  let grant = new Player(player1);
-  let loser = new Player(player2);
-  var game = new Game(grant, loser);
-  for (var i = 1; i < 4; i++) {
+game2.turn(grant.hand(), loser.hand()); console.log(game2);
+game2.turn(grant.hand(), loser.hand());
+console.log(grant.roundsPlayed);
 
-    console.log(grant);
-    game.turn(grant.hand(), loser.hand());
-    // console.log(grant.status(), loser.status());
-  }
-  //let game3 =new Game(grant, loser);
- //game3.turn(grant.move(), loser.move());
-
-}
-
-console.log(bestOf3("gMoney", "ronan"));
+// function bestOf3(player1, player2) {
+//   let grant = new Player(player1);
+//   let loser = new Player(player2);
+//   var game = new Game(grant, loser);
+//   for (var i = 1; i < 4; i++) {
+//
+//     console.log(grant);
+//     game.turn(grant.hand(), loser.hand());
+//     // console.log(grant.status(), loser.status());
+//   }
+//   //let game3 =new Game(grant, loser);
+//  //game3.turn(grant.move(), loser.move());
+//
+// }
+//
+// console.log(bestOf3("gMoney", "ronan"));
 
 module.exports = {
   Game: Game,
